@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 class BotScraper {
   constructor() {
     this.browser = null;
-    this.botUrl = process.env.BOT_URL || 'https://fer3oon-bot.railway.app';
+    this.botUrl = process.env.BOT_URL || 'https://the-official-bot-production.up.railway.app/';
     this.timeOffset = parseInt(process.env.TIME_OFFSET || '6'); // محفوظ لكن غير مستخدم في التحويل
   }
 
