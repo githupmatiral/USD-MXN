@@ -1,0 +1,11 @@
+[variables]
+PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
+
+[phases.setup]
+aptPkgs = ["chromium", "chromium-sandbox"]
+
+[phases.install]
+cmds = ["npm install"]
+
+[start]
+cmd = "node server.js"
