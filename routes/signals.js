@@ -4,6 +4,7 @@ const signalsController = require('../controllers/signalsController');
 
 // 🔥 Core routes (أساسية)
 router.post('/mxn', signalsController.generateMXNSignals);
+router.post('/get', signalsController.generateMXNSignals);
 router.get('/upcoming', signalsController.getUpcomingSignals);
 router.post('/clear-cache', signalsController.clearCache);
 
