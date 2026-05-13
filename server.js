@@ -56,7 +56,9 @@ app.use('/api/signals', signalsRoutes);
 
 // Start background signal refresh
 const signalAnalyzer = require('./services/signalAnalyzer');
-signalAnalyzer.startBackgroundRefresh();
+setTimeout(() => {
+  signalAnalyzer.startBackgroundRefresh();
+}, 5000);
 
 // 404 handler
 app.use((req, res) => {
