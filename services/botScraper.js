@@ -43,7 +43,7 @@ class BotScraper {
         timeout: 60000
       });
 
-      await page.select('#cbAtivo', 'USD_MXN_OTC_QTX');
+      await page.select('#cbAtivo', 'USD_MXN');
       await page.evaluate(() => {
         const select = document.querySelector('#cbAtivo');
         select.dispatchEvent(new Event('change', { bubbles: true }));
