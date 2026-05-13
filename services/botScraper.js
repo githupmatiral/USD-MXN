@@ -44,7 +44,11 @@ class BotScraper {
       });
 
       await page.select('#cbAtivo', 'USD_MXN_OTC_QTX');
-      await this.sleep(500);
+      await page.evaluate(() => {
+        const select = document.querySelector('#cbAtivo');
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+      await this.sleep(1000);
 
       await page.select('#selPercentageMin', '100');
       await this.sleep(500);
@@ -62,6 +66,7 @@ class BotScraper {
       await this.sleep(500);
 
       await page.evaluate(() => {
+        listBestPairTimes = [];
         getHistoric();
       });
 
